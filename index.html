@@ -1,32 +1,44 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
     <title>7fVEE(sZxJq:k!2f</title>
-    <meta name="description" content="A random password generator. Made by @iign - MONTAG.">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+    <meta
+      name="description"
+      content="A random password generator. Made by @iign - MONTAG."
+    />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"
+    />
     <!-- Favicons: TODO: realfavicongenerator.net -->
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/main.css" />
   </head>
   <body id="body">
-
     <main class="container">
-      <img src="img/logo.svg" alt="7fVEE<sZxJq:k!2f" class="logo">
+      <img src="img/logo.svg" alt="7fVEE<sZxJq:k!2f" class="logo" />
 
-      <input readonly="true" spellcheck="false" placeholder="Press Generate" type="text" class="input" id="input" >
+      <input
+        readonly="true"
+        spellcheck="false"
+        placeholder="Press Generate"
+        type="text"
+        class="input"
+        id="input"
+      />
 
       <button class="btn-generate" id="btn-generate">Generate</button>
-
     </main>
 
     <div class="panel-options" id="panel-options">
       <button class="btn-options" id="btn-options">Options</button>
       <div class="panel-body">
         <div class="option">
-          <label for="">Length:</label> <span id="length" class="value">32</span>
+          <label for="">Length:</label>
+          <span id="length" class="value">32</span>
           <div>
-            <input id="range" type="range" min="16" max="64" step="1">
+            <input id="range" type="range" min="16" max="64" step="1" />
           </div>
         </div>
       </div>
@@ -36,16 +48,22 @@
       <h2 class="modal__title">About</h2>
       <div class="modal__body">
         <p>
-          This is a very simple tool that I created to quickly generate passwords for day to day use.
+          This is a very simple tool that I created to quickly generate
+          passwords for day to day use.
         </p>
         <p>
           *Don’t* use it for anything serious.
         </p>
         <p>--</p>
-        <p>Handcrafted with &lt;3 by <a href="http://ign.uy">@iign</a> /  <a href="https://montag.uy">MONTAG</a></p>
+        <p>
+          Handcrafted with &lt;3 by <a href="http://ign.uy">@iign</a> /
+          <a href="https://montag.uy">montag</a>
+        </p>
         <p>--</p>
         <p>
-          <a href="https://github.com/iign/passgen">Click here to view source.</a>
+          <a href="https://github.com/iign/passgen"
+            >Click here to view source.</a
+          >
         </p>
       </div>
     </div>
@@ -53,6 +71,5 @@
     <button class="btn-modal" id="js-btn-modal">Toggle About</button>
 
     <script src="js/app.js"></script>
-
   </body>
 </html>
