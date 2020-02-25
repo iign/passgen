@@ -1,23 +1,27 @@
 @charset "UTF-8";
 
 // Imports and variables
-@import 'variables';
-@import 'helpers';
-@import 'range';
+@import "variables";
+@import "helpers";
+@import "range";
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
 @font-face {
-  font-family: 'OCR-A';
-  src: url('../fonts/OCRAStd.eot');
-  src: local('OCR-A'), url('../fonts/OCRAStd.woff') format('woff'), url('../fonts/OCRAStd.ttf') format('truetype'), url('../fonts/OCRAStd.svg') format('svg');
+  font-family: "OCR-A";
+  src: url("../fonts/OCRAStd.eot");
+  src: local("OCR-A"), url("../fonts/OCRAStd.woff") format("woff"),
+    url("../fonts/OCRAStd.ttf") format("truetype"),
+    url("../fonts/OCRAStd.svg") format("svg");
   font-weight: normal;
   font-style: normal;
 }
 
-html{
+html {
   font-family: "OCR-A", monospace, sans-serif;
   box-sizing: border-box;
   -webkit-font-smoothing: subpixel-antialiased;
@@ -27,25 +31,28 @@ html{
   background: white;
 }
 
-html, body, form, button, input{
+html,
+body,
+form,
+button,
+input {
   font-family: "OCR-A", monospace, sans-serif;
 }
 
-
-body{
+body {
   margin: 0;
   padding: 0;
   height: 100vh;
   overflow: hidden;
-  overflow-y:hidden;
+  overflow-y: hidden;
 }
 
-.container{
+.container {
   width: 100%;
   max-width: 768px;
   padding: 30px 10px;
   margin: 0 auto;
-  @media($desktop){
+  @media ($desktop) {
     padding: 90px 20px;
   }
 }
@@ -55,14 +62,16 @@ body{
   color: white;
 }
 
-img{ max-width: 100%; }
+img {
+  max-width: 100%;
+}
 
-.logo{
+.logo {
   display: block;
   margin: 0 auto 30px auto;
 }
 
-.input{
+.input {
   width: 100%;
   font-size: 14px;
   border: 1px solid $color-primary;
@@ -71,11 +80,11 @@ img{ max-width: 100%; }
   padding: 10px;
   margin-bottom: 21px;
 
-  @media($desktop){
+  @media ($desktop) {
     font-size: 20px;
   }
 
-  &:focus{
+  &:focus {
     border-color: $color-secondary;
     outline: none;
   }
@@ -86,7 +95,7 @@ img{ max-width: 100%; }
   }
 }
 
-.btn-generate{
+.btn-generate {
   background: #393939;
   cursor: pointer;
   border-radius: 4px;
@@ -97,12 +106,12 @@ img{ max-width: 100%; }
   width: 100%;
   padding: 13px 0;
   outline: none;
-  &:active{
+  &:active {
     background: lighten(#393939, 10%);
   }
 }
 
-.panel-options{
+.panel-options {
   position: absolute;
   height: 200px;
   width: 100%;
@@ -114,22 +123,21 @@ img{ max-width: 100%; }
   background: white;
   text-align: left;
 
-
-  &.active{
+  &.active {
     transform: translateY(0);
-    .btn-options{
+    .btn-options {
       background-image: url(../img/icon-minus.svg);
     }
   }
 
-  @media($desktop){
+  @media ($desktop) {
     width: 400px;
     left: auto;
     right: 30px;
     border: 1px solid $color-primary;
   }
 
-  .btn-options{
+  .btn-options {
     cursor: pointer;
     outline: none;
     height: 54px;
@@ -143,17 +151,16 @@ img{ max-width: 100%; }
     background-position: center right 20px;
   }
 
-  .panel-body{
+  .panel-body {
     padding: 30px 20px;
   }
-
 }
 
-.option{
+.option {
   margin-bottom: 25px;
 }
 
-.btn-modal{
+.btn-modal {
   @extend %hide-text;
   position: absolute;
   top: 10px;
@@ -168,26 +175,26 @@ img{ max-width: 100%; }
   transition: 200ms;
   outline: none;
 
-  @media ($desktop){
+  @media ($desktop) {
     top: 30px;
     right: 30px;
   }
 
-  .modal--active &{
+  .modal--active & {
     background-image: url(../img/btn-close.svg);
   }
 
-  &:hover{
+  &:hover {
     transform: scale3d(1.1, 1.1, 1.1);
     transition: 200ms;
   }
-  &:active{
+  &:active {
     transform: scale3d(1.2, 1.2, 1.2);
     transition: 0ms;
   }
 }
 
-.modal{
+.modal {
   position: fixed;
   top: 0;
   left: 0;
@@ -214,23 +221,23 @@ img{ max-width: 100%; }
     letter-spacing: 2.63px;
     line-height: 19px;
   }
-  a{
+  a {
     color: white;
   }
 
-  .modal--active &{
+  .modal--active & {
     opacity: 1;
     pointer-events: all;
     transform: scale3d(1, 1, 1);
     transition: 300ms;
   }
 
-  &__body{
+  &__body {
     margin: 0 auto;
     max-width: 430px;
   }
 
-  &__title{
+  &__title {
     text-align: center;
     font-size: 36px;
     letter-spacing: 8.62px;
